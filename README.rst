@@ -1,4 +1,2 @@
-TODO: Add app name
+django-themeit
 ==================
-
-TODO: Add project readme.
