@@ -1,8 +1,10 @@
-"""Models for themeit application."""
-
 from django.db import models
+from django.contrib.sites.models import Site
 
-
-class Example(models.Model):
-    """Example model class."""
-    text = models.TextField(blank=True, null=True)
+class Theme(models.Model):
+    css = models.CharField(max_length=255, blank=True, null=True)
+    site = models.ForeignKey(Site)
+    def __unicode__(self):
+        return '%s' % self.site
+    class Admin:
+        pass

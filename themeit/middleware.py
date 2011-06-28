@@ -2,7 +2,7 @@ __author__ = 'jbn'
 import re
 from themes import themepatterns
 
-class Themeit(object):
+class ThemeitMiddleware(object):
     def build_path(self, request):
         path = (request.META['HTTP_HOST'], request.get_full_path())
         return ''.join(path)
